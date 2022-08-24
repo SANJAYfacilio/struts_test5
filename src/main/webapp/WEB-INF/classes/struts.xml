@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="login" class="login.user" method="execute">
+            <result name="success">/userfile.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+        <action name="signup" class="login.createuser">
+            <result name="success">/index.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+        <action name="disp" class="login.user" method="display">
+            <result name="success">/displaydetails.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+        <action name="modify" class="login.user" method="setmodify">
+            <result name="success">/modifydetails.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+        <action name="mod" class="login.user" method="modify">
+            <result name="success">/displaydetails.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+        <action name="entry" class="login.user" method="modify">
+            <result name="success">/modifydetails.jsp</result>
+            <result name="error">/loginerror.jsp</result>
+            <result name="loginerror">/index.jsp</result>
+        </action>
+    </package>
+
+</struts>
